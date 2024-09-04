@@ -5,6 +5,11 @@
     "dotenv": "^16.4.5",
     "openai": "^4.57.1",
     "puppeteer": "^23.3.0",
-    "puppeteer-core": "^23.3.0"
+    "puppeteer-core": "^10.1.0"
+    
+  },
+  "scripts": {
+    "postinstall": "npm install --legacy-peer-deps"
   }
+  
 }
