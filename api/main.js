@@ -1,6 +1,17 @@
 import puppeteer from 'puppeteer';
 
 export default async function handler(req, res) {
+  // Set the CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');  // Allows all origins, or you can specify 'http://localhost:3000'
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');  // Allow specific HTTP methods
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // Handle preflight request (for OPTIONS method)
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   const link = `https://www.yelp.com/biz/prince-tea-house-brooklyn-3`;
@@ -60,7 +71,13 @@ export default async function handler(req, res) {
     combinedText,
     averageRating: averageRating.toFixed(2),
   });
+
+  // Example response
+  res.status(200).json({
+    message: 'CORS is enabled!',
+  });
 }
+
 
 // // main.js
 
