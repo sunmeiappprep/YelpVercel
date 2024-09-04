@@ -1,5 +1,5 @@
 import chromium from 'chrome-aws-lambda';
-import { sendPrompt } from '../gpt.js';  // Import the GPT function
+import { sendPrompt } from './gpt.js';  // Import the GPT function
 
 export default async function handler(req, res) {
   // Set CORS headers
