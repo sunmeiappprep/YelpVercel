@@ -1,8 +1,10 @@
 {
   "type": "module",
   "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
     "dotenv": "^16.4.5",
     "openai": "^4.57.1",
-    "puppeteer": "^23.3.0"
+    "puppeteer": "^23.3.0",
+    "puppeteer-core": "^23.3.0"
   }
 }
