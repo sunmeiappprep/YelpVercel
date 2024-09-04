@@ -7,9 +7,6 @@
     "puppeteer": "^23.3.0",
     "puppeteer-core": "^10.1.0"
     
-  },
-  "scripts": {
-    "postinstall": "npm install --legacy-peer-deps"
   }
   
 }
